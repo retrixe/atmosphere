@@ -2,15 +2,16 @@
   import { assets } from '$app/paths'
   import { page } from '$app/state'
   import type { Snippet } from 'svelte'
-  import type { LayoutData } from './$types'
   import { invalidate, onNavigate } from '$app/navigation'
   import ky from '$lib/api/ky'
   import GitHubImage from '$lib/assets/GitHubImage.svelte'
   import 'heliodor/Baseline.scss'
   import { TopBar, TopBarDivider, TopBarTitle, TopBarLink } from 'heliodor'
 
-  const { data, children }: { data: LayoutData; children: Snippet } = $props()
-  const { username } = $derived(data)
+  // const { data, children }: { data: LayoutData; children: Snippet } = $props()
+  const { children }: { children: Snippet } = $props()
+  // FIXME: const { username } = $derived(data)
+  const username = 'test'
   const { title, description, image, imageLarge, noIndex } = $derived(page.data)
 
   async function logout(event: Event) {
@@ -98,7 +99,7 @@
       :root {
         --link-color: #b2ffff; /* Celeste */
         --background-color: #0e0e10; /* Jet black */
-        --surface-color: #2d2828; /* Eerie black */
+        --surface-color: #1b1b1b; /* Eerie black */
         --color: #ffffff;
         --divider-color: #666;
       }
