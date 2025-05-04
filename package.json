@@ -16,6 +16,10 @@
     "format:check": "prettier --check .",
     "lint": "yarn check && eslint --cache --cache-strategy content --cache-location .svelte-kit/ ."
   },
+  "dependencies": {
+    "heliodor": "^0.0.7",
+    "ky": "^1.8.1"
+  },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
     "@sveltejs/adapter-auto": "^6.0.0",
@@ -25,7 +29,7 @@
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-n": "^17.17.0",
-    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-prettier": "^5.3.1",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-svelte": "^3.5.1",
     "globals": "^16.0.0",
